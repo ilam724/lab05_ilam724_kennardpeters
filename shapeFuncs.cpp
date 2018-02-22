@@ -35,8 +35,9 @@ double distanceBetween(Point p, Point q) {
 // p->y is a shortcut for (*p).y ( -> means deference AND THEN go inside the struct)
 
 
-void initPoint(struct Point *p, double xVal, double yVal) {
-  //return; //@@@ for a void function, the stub is just a bare return that does nothing
+void initPoint(struct Point *p, double xVal, double yVal){
+  p->x=xVal;
+  p->y=yVal; 
 }
 
 
@@ -83,8 +84,17 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
   // TODO: FILL THIS IN WITH APPROPRIATE CODE
 
-  return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
+  if(pointsApproxEqual(b1.ul, b2.ul, tolerance) == false){
+      return false;
+    }
+  if((approxEqual(b1.width, b2.width, tolerance) == true)&& (approxEqual(b1.height, b2.height, tolerance)==true))) {
+  return true;
+    }
+ else{
+   return false;
+   }
 }
+
 
 
 // Now write a function to initialize a box.
