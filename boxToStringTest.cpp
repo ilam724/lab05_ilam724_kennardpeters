@@ -12,17 +12,18 @@
 
 int main() {
 
-  struct Box b1,b2;
+  struct Box b1;
   initBox(&b1,-5.1234567,6.234567,1.145678,2.12456778);
   assertEquals("[ul=(-5, 6), w=1, h=2]", boxToString(b1,1), "boxToString(b1,1)");
   assertEquals("[ul=(-5.1, 6.2), w=1.1, h=2.1]", boxToString(b1,2), "boxToString(b1,2)");
   assertEquals("[ul=(-5.12, 6.23), w=1.15, h=2.12]", boxToString(b1,3), "boxToString(b1,3)");
+  assertEquals("[ul=(-5.123, 6.235), w=1.146, h=2.125]", boxToString(b1,4), "boxToString(b1,4)");
+  assertEquals("[ul=(-5.1235, 6.2346), w=1.1457, h=2.1246]", boxToString(b1,5), "boxToString(b1,5)");
+  assertEquals("[ul=(-5.12346, 6.23457), w=1.14568, h=2.12457]", boxToString(b1,6), "boxToString(b1,6)");
 
-  initBox(&b2, 8.23459466, 9.12892831853071, 4.563453463453445, 5.3646793456);
-  assertEquals("[ul=(8.23, 9.13), w=4.56, h=5.36]", boxToString(b2), "boxToString(b2)");
-  assertEquals("[ul=(8, 9), w=5, h=5]", boxToString(b2,1), "boxToString(b2,1)");
-  assertEquals("[ul=(8.235, 9.129), w=4.563, h=5.365]", boxToString(b2,4), "boxToString(b2,4)");
-  assertEquals("[ul=(8.2346, 9.1289), w=4.5635, h=5.3647]" , boxToString(b2,5), "boxToString(b2,5)");
+
+
+
 
   // SAMPLE FORMAT: [ul=(3.4,-5), w=5,h=7]
 		   
