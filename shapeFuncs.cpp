@@ -36,6 +36,8 @@ double distanceBetween(Point p, Point q) {
 
 
 void initPoint(struct Point *p, double xVal, double yVal){
+  //Preconditions: stuct Point has to be declared. xVal and yVal have to be passed through
+  //Postconditions: p->x=xVal,p->y=yVal
   p->x=xVal;
   p->y=yVal; 
 }
@@ -85,14 +87,14 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
   // TODO: FILL THIS IN WITH APPROPRIATE CODE
 
   if(pointsApproxEqual(b1.ul, b2.ul, tolerance) == false){
-      return false;
-    }
-  if((approxEqual(b1.width, b2.width, tolerance) == true)&& (approxEqual(b1.height, b2.height, tolerance)==true))) {
+    return false;
+  }
+  if((approxEqual(b1.width, b2.width, tolerance) == true)&& (approxEqual(b1.height, b2.height, tolerance)==true)) {
   return true;
-    }
+}
  else{
    return false;
-   }
+ }
 }
 
 
